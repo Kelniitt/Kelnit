@@ -22,6 +22,19 @@
   object-fit: contain;
 }
 
+/* Past Project Section Configuration */
+
+.past-project {
+  margin: 15px 0;
+  padding: 15px 0;
+  height: auto;
+}
+
+.projecta .row .col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+
 /* Footer Sectional */
 
 /* Media Size Configuration */
@@ -31,6 +44,19 @@
     margin : 15px 0;
     display: flex;
     justify-content: center;
+  }
+  .mainpage {
+    height: auto;
+    padding: 40px 0;
+  }
+  .past-project{
+    margin: px 0;
+  }
+  .projecta .row .col-12 {
+    margin: 10px 0;
+  }
+  .techno {
+    height: auto;
   }
 }
 
