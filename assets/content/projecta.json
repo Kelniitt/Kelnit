@@ -14,6 +14,16 @@
       "title":"Year",
       "description":"Market Basket Analysis Using Apriori Approach",
       "url":"https://github.com/Kelniit/Year"
+    },
+    {
+      "title":"Julius",
+      "description":"Recommendation System Using Content Based & Collaborative Filtering",
+      "url":"https://github.com/Kelniit/Julius"
+    },
+    {
+      "title":"Air",
+      "description":"Monthly Airline Passengers Forecast Using Arima",
+      "url":"https://github.com/Kelniit/Air"
     }
   ]
 }
