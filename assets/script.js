@@ -41,7 +41,7 @@ async function JSONFileHelper(jsonFileUrl) {
 }
 
 async function MainMinute(jsonFile) {
-  
+
   const result = await JSONFileHelper(jsonFile)
 
   if (!result) {
@@ -51,7 +51,7 @@ async function MainMinute(jsonFile) {
   let container = document.getElementById("minutelord");
   result.projects.forEach(project => {
     let output = `
-    <div class="col-12 col-md-4">
+    <div class="col-12 col-md-4 pt-4">
       <div class="card" style="width: 18rem;">
         <img src="Mountain.jpeg" class="card-img-top">
         <div class="card-body">
