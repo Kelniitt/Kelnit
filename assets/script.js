@@ -21,6 +21,54 @@ function Yearly() {
   console.log(tanggal);
 }
 
+async function JSONFileHelper(jsonFileUrl) {
+
+  try {
+    const response = await fetch(jsonFileUrl)
+
+    if (!response.ok) {
+      let errorMessage = `HTTP Error ! Status: ${response.status}`
+      throw new Error(errorMessage)
+    }
+
+    const result = await response.json();
+    return result
+  } catch (error) {
+    let errorMessage = `Error : ${error.message}`
+    console.error(errorMessage);
+    return null
+  }
+}
+
+async function MainMinute(jsonFile) {
+  
+  const result = await JSONFileHelper(jsonFile)
+
+  if (!result) {
+    console.log("Fail !")
+  }
+
+  let container = document.getElementById("minutelord");
+  result.projects.forEach(project => {
+    let output = `
+    <div class="col-12 col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="Mountain.jpeg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">${project.title}</h5>
+          <a href="${project.url}" type="button" class="btn btn-dark rounded mt-4">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    `;
+    container.innerHTML += output;
+  })
+}
+
 GenerateStack()
 
 Yearly()
+
+MainMinute("/assets/content/projecta.json");

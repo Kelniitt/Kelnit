@@ -1,0 +1,19 @@
+{
+  "projects" : [
+    {
+      "title":"Hart",
+      "description":"Cat & Dog Image Classification",
+      "url":"https://github.com/Kelniit/Harti"
+    },
+    {
+      "title":"Hut",
+      "description":"Dicoding Belajar Machine Learning Dasar Final Project for Classify Rock, Paper, Scissors",
+      "url":"https://github.com/Kelniit/Huti"
+    },
+    {
+      "title":"Year",
+      "description":"Market Basket Analysis Using Apriori Approach",
+      "url":"https://github.com/Kelniit/Year"
+    }
+  ]
+}
