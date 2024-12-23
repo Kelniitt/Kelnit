@@ -48,7 +48,7 @@
 
 /* Media Size Configuration */
 
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .row .col-4 {
     margin : 15px 0;
     display: flex;

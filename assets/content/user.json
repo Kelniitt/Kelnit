@@ -1,0 +1,16 @@
+{
+  "users" : [
+    {
+      "url":"https://github.com/Kelniit",
+      "icon":"bi bi-github"
+    },
+    {
+      "url":"https://www.linkedin.com/in/kelvin-mulyawan/",
+      "icon":"bi bi-linkedin"
+    },
+    {
+      "url":"mailto:kelpmul00@gmail.com",
+      "icon":"bi bi-envelope"
+    }
+  ]
+}

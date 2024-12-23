@@ -1,3 +1,46 @@
+async function JSONFileHelper(jsonFileUrl) {
+
+  try {
+    const response = await fetch(jsonFileUrl)
+
+    if (!response.ok) {
+      let errorMessage = `HTTP Error ! Status: ${response.status}`
+      throw new Error(errorMessage)
+    }
+
+    const result = await response.json();
+    return result
+  } catch (error) {
+    let errorMessage = `Error : ${error.message}`
+    console.error(errorMessage);
+    return null
+  }
+}
+
+
+          {/*  */}
+        // </a>
+        // &nbsp;
+
+async function Mistari(jsonFile){
+
+  const result = await JSONFileHelper(jsonFile)
+
+  if (!result) {
+    console.log("Fail !")
+  }
+
+  let container = document.getElementById("mistlord");
+  result.users.forEach(user => {
+    let output = `
+    <a href="${user.url}" type="button" class="btn btn-dark rounded" style="margin-right : 5px;">
+      <i class="${user.icon}"></i>
+    </a>
+    `;
+    container.innerHTML += output;
+  })
+}
+
 function GenerateStack() {
   let techno = ["python", "tensorflow", "mysql", "flask"]
   let othertech = ["googlecloud", "googlebigquery", "googledataflow"]
@@ -19,25 +62,6 @@ function GenerateStack() {
 function Yearly() {
   let tanggal = new Date().getFullYear();
   console.log(tanggal);
-}
-
-async function JSONFileHelper(jsonFileUrl) {
-
-  try {
-    const response = await fetch(jsonFileUrl)
-
-    if (!response.ok) {
-      let errorMessage = `HTTP Error ! Status: ${response.status}`
-      throw new Error(errorMessage)
-    }
-
-    const result = await response.json();
-    return result
-  } catch (error) {
-    let errorMessage = `Error : ${error.message}`
-    console.error(errorMessage);
-    return null
-  }
 }
 
 async function MainMinute(jsonFile) {
@@ -66,6 +90,8 @@ async function MainMinute(jsonFile) {
     container.innerHTML += output;
   })
 }
+
+Mistari("/assets/content/user.json")
 
 GenerateStack()
 
